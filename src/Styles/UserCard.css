@@ -1,0 +1,25 @@
+.user-card {
+    width: 200px;
+    height: 180px;
+    padding: 20px;
+    transition: .3s;
+    margin-top: 1rem;
+    color: #121212;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.user-card:hover {
+    border: none;
+    transition: .3s;
+    transform: scale(105%);
+    box-shadow: 0 15px 15px #f7f7f7;
+}
+
+.user-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+}

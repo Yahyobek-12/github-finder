@@ -1,0 +1,95 @@
+.user-profile {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  position: absolute;
+  background: #fff;
+}
+
+.back-icon {
+  top: 18px;
+  left: 18px;
+  color: #fff;
+  padding: 8px;
+  font-size: 40px;
+  background: #000;
+  position: absolute;
+  border-radius: 5px;
+}
+
+.back-icon:hover,
+.go-profile:hover {
+  opacity: 0.7;
+  transform: .3s;
+}
+
+.go-profile {
+  top: 18px;
+  right: 18px;
+  color: #fff;
+  padding: 8px;
+  font-size: 40px;
+  background: #000;
+  position: absolute;
+  border-radius: 5px;
+}
+
+.user-top-bar {
+  width: 100%;
+  height: 150px;
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.user-top-bar h2 {
+  color: #09f;
+}
+
+.user-top-bar img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+  border: 5px solid #2970ff;
+}
+
+.user-top-flex {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  margin-top: 2rem;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.user-middle-bar {
+  width: 100%;
+  height: 100px;
+  padding: 15px;
+  font-size: 20px;
+  margin-top: 8rem;
+  text-align: center;
+}
+
+.user-all-data {
+  margin-bottom: 15rem;
+}
+
+/* MEDIA SCREEN */
+
+@media only screen and (max-width: 460px) {
+  .user-top-flex {
+    display: block;
+  }
+
+  .user-top-flex h3 {
+    margin-bottom: 1rem;
+  }
+
+  .user-middle-bar {
+    margin-top: 12rem;
+  }
+}
