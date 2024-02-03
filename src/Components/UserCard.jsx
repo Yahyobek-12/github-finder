@@ -6,7 +6,7 @@ const UserCard = ({ item }) => {
   return (
     <Link to={`/profile/${item.login}`} className='user-card animate__animated animate__fadeInUp'>
       <img src={item.avatar_url} alt="user" />
-      <h3>{item.login}</h3>
+      <h3>{item.login.slice(0, 12)}</h3>
     </Link>
   );
 };
