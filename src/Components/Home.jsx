@@ -16,7 +16,7 @@ const Home = () => {
       <div className="home-in">
         {loading ? (
           <div className="loading">
-            <h3>Loading...</h3>
+            <div className="loading-round"></div>
           </div>
         ) : (
           <>

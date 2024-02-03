@@ -1,14 +1,10 @@
 import '../Styles/UserProfile.css';
-import { IoPersonCircle } from "react-icons/io5";
 import { Link, useParams } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
-import { IoMdArrowRoundBack } from "react-icons/io";
 
 const UserProfile = () => {
   const { username } = useParams();
   const [userData, setUserData] = useState(null);
-
-  console.log(username);
 
   useEffect(() => {
     document.title = `User/${username}`;
@@ -40,11 +36,17 @@ const UserProfile = () => {
             </div>
           </div>
           <div className="user-middle-bar">
-            <p>Bio: {userData.bio}</p>
+            {userData.bio === null || userData.bio === '' ? (
+              <h3>Not Have Bio This User</h3>              
+            ) : (
+              <p>Bio: {userData.bio}</p>
+            )}
           </div>
         </>
       ) : (
-        <p>Loading...</p>
+        <div className="loading">
+          <div className="loading-round"></div>
+        </div>
       )}
     </div>
   );

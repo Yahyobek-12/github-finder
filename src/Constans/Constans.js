@@ -1,3 +1,4 @@
+// ApiProvider.js
 import { createContext, useEffect, useState } from "react";
 
 export const ApiContext = createContext();
@@ -5,11 +6,12 @@ export const ApiContext = createContext();
 const ApiProvider = ({ children }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [userData, setUserData] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [searchClicked, setSearchClicked] = useState(false); // New state
 
   useEffect(() => {
-    if (!searchQuery) {
+    if (!searchQuery || !searchClicked) {
       setUserData([]);
       setLoading(false);
       return;
@@ -23,7 +25,6 @@ const ApiProvider = ({ children }) => {
       .then((data) => {
         if (data.items) {
           setUserData(data.items);
-          console.log(data.items);
         } else {
           setUserData([]);
           setError("No users found.");
@@ -36,10 +37,14 @@ const ApiProvider = ({ children }) => {
         setError("Error fetching data. Please try again.");
         setLoading(false);
       });
-  }, [searchQuery]);
+  }, [searchQuery, searchClicked]); // Add searchClicked to dependency array
+
+  const handleSearchClick = () => {
+    setSearchClicked(true);
+  };
 
   return (
-    <ApiContext.Provider value={{ searchQuery, setSearchQuery, userData, loading, error }}>
+    <ApiContext.Provider value={{ searchQuery, setSearchQuery, userData, loading, error, handleSearchClick }}>
       {children}
     </ApiContext.Provider>
   );
