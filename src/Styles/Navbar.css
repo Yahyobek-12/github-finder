@@ -106,6 +106,7 @@
         height: 60px;
         display: flex;
         position: absolute;
+        background: #fff;
         align-items: center;
         justify-content: center;
         animation: formActive .5s forwards;

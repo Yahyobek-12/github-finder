@@ -1,6 +1,6 @@
 .user-card {
-    width: 200px;
-    height: 180px;
+    width: 250px;
+    height: 220px;
     padding: 20px;
     transition: .3s;
     margin-top: 1rem;
@@ -18,8 +18,8 @@
 }
 
 .user-card img {
-    width: 120px;
-    height: 120px;
+    width: 180px;
+    height: 180px;
     object-fit: cover;
     border-radius: 50%;
 }

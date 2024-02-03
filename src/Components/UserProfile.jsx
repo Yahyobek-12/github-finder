@@ -25,7 +25,7 @@ const UserProfile = () => {
   return (
     <div className='user-profile'>
       {userData ? (
-        <>
+        <div className='animate__animated animate__fadeInDown'>
           <div className="user-top-bar">
             <img src={userData.avatar_url} alt={userData.login} />
             <h2>@{userData.login}</h2>
@@ -42,7 +42,7 @@ const UserProfile = () => {
               <p>Bio: {userData.bio}</p>
             )}
           </div>
-        </>
+        </div>
       ) : (
         <div className="loading">
           <div className="loading-round"></div>
