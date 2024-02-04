@@ -2,7 +2,7 @@
 const Footer = () => {
   return (
     <div className="footer">
-      &copy; From New Codes 2024
+      &copy; From NWT
     </div>
   )
 }

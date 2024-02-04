@@ -1,5 +1,5 @@
 import '../Styles/UserProfile.css';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 
 const UserProfile = () => {
